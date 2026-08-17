@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "alg": "AES-256-GCM",
+  "kdf": {
+    "id": "argon2id",
+    "m": 65536,
+    "t": 3,
+    "p": 1,
+    "salt": "RXpKb3VybmFsRGV2U2FsdA=="
+  },
+  "wrappedKey": "kaGq9COIXk8IZkrBbyA0gYXU1ZC9RdKgyv5FtfgYNW4wt4nGpRkZC22THKGzvJgf",
+  "wrapNonce": "exf95nidW0GGM5tY",
+  "nonce": "DHEtiC4twErF6IPo",
+  "ct": "tyULA/yi20Z9zSea6QSYJQ00Yae9fCrpNLAgor/FZOjLRyhvG5ntX2XvswhNKI6urqz3JJsRwF0QZncKu2goke3cdRPqTwX+kJzkUtnnIM/MpZLhWsupm0BZV3tzdI4eapxfLql113+/KeLXfaAipY7blP9VWs7EXcEhi2AM3+GkaSTeh9YXcjkvDHNBGoDc1+XoieEmUJKk2bwurC6xniaI+k9L3VdUhcr7dmT6mzk2bM/5yrSlKV/jGC+feyPnwR8KfVAX2HEczw=="
+}

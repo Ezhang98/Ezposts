@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kdf": "argon2id",
+  "salt": "RXpKb3VybmFsRGV2U2FsdA==",
+  "params": {
+    "m": 65536,
+    "t": 3,
+    "p": 1
+  }
+}

@@ -1,0 +1,36 @@
+# EzJournal leak guard (SPEC §10.4)
+#
+# CI backstop: rejects any push where a file under /private/ is not a valid
+# encryption envelope, or where a file outside the published-site allowlist
+# was added or modified. See ci/leak-guard.mjs for the exact rules.
+name: leak-guard
+
+on: [push]
+
+permissions:
+  contents: read
+
+jobs:
+  leak-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # full history so the push's before-SHA is diffable
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run leak guard
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: node ci/leak-guard.mjs
+
+      # The full crypto test suite (argon2 known-answer vectors + envelope
+      # round-trip + fixture decryption) also runs as a second backstop, so a
+      # broken argon2/crypto change can never be published silently.
+      - name: Run site test suite
+        run: node test/run.js --fast

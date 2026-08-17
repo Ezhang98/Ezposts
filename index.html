@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>EzJournal — personal log</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="content">
+<div class="content-outer">
+<div class="content-inner">
+
+  <header class="site-header">
+    <h1 class="site-title"><a href="#/">EzJournal</a></h1>
+    <p class="site-tagline"><span>personal log // transmissions from the outer rim</span></p>
+  </header>
+
+  <nav class="site-nav" aria-label="Site">
+    <ul>
+      <li data-route="home" class="selected"><a href="#/">Home</a></li>
+      <li data-route="archive"><a href="#/archive">Archive</a></li>
+      <li data-route="private"><a href="#/private">Private</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-inner">
+    <div class="main-columns">
+
+      <main id="app" class="main-col" aria-live="polite">
+        <noscript>
+          <div class="post-outer">
+            <h3 class="post-title">JavaScript is disabled</h3>
+            <div class="post-body">
+              The reading view uses JavaScript for navigation, but every public
+              post is also published as a plain page under
+              <code>/posts/&lt;slug&gt;.html</code> and is fully readable
+              without it. The encrypted private section requires JavaScript
+              to decrypt in your browser.
+            </div>
+          </div>
+        </noscript>
+        <div class="status-line">ESTABLISHING LINK …</div>
+      </main>
+
+      <aside class="sidebar-col" aria-label="Sidebar">
+        <div class="widget">
+          <h2>Search logs</h2>
+          <input id="search-input" class="sf-input" type="search"
+                 placeholder="filter transmissions" aria-label="Search posts">
+        </div>
+        <div class="widget">
+          <h2>Archive</h2>
+          <ul id="archive-widget"><li>—</li></ul>
+        </div>
+        <div class="widget">
+          <h2>Vault</h2>
+          <ul>
+            <li><a href="#/private">Restricted archive</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    EzJournal — published from the device, rendered in your browser ·
+    no trackers, no third-party requests · // end of transmission
+  </footer>
+
+</div>
+</div>
+</div>
+
+<script src="assets/argon2.js"></script>
+<script src="assets/crypto.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "slug": "first-transmission",
+      "title": "First transmission",
+      "date": "2026-08-10",
+      "tags": [
+        "meta",
+        "systems"
+      ],
+      "excerpt": "The journal is online. Publishing is a deliberate act — this entry exists because I chose to push it."
+    },
+    {
+      "slug": "signal-check-habits",
+      "title": "Signal check: habits survive the merge",
+      "date": "2026-08-13",
+      "tags": [
+        "habits",
+        "log"
+      ],
+      "excerpt": "Three predecessor apps, one data model. The streak counter survived the migration design — weeks still start on Monday."
+    }
+  ]
+}
